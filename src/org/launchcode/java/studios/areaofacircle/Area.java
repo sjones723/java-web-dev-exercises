@@ -9,6 +9,11 @@ public class Area {
         var input = new Scanner(System.in);
         System.out.print("Enter a radius: ");
         var r = input.nextDouble();
+        while(r<.00000001){
+            System.out.print("Enter a radius: ");
+            r = input.nextDouble();
+        }
+
         double a = Circle.getArea(r);
         System.out.println("The area of a circle of radius " + r + " is: " + a);
     }
